@@ -289,7 +289,7 @@ class ArchivingRobot:
                         else:
                             dst = 'CET'
                             
-                        section_text += '\n<!-- %s %s %s (%s) -->' % (time.strftime('%d'), self.month[int(time.strftime('%m'))], time.strftime('%Y %H:%M'), dst)
+                        section_text += '\n<!-- %s %s %s -->' % (time.strftime('%d'), self.month[int(time.strftime('%m'))], time.strftime('%Y %H:%M (%Z)'))
                         new_text += sections[i-1] + section_text
                         continue
                     #Check if a section should be archived using the most recent date.
